@@ -19,6 +19,6 @@ CREATE TABLE pracownicy (
     premia NUMERIC,
     id_dzial INTEGER,
     FOREIGN KEY(stanowisko) REFERECES dzial(id),
-    FOREIGN KEY(id_dzial) REFERECES dzial(id),
+    FOREIGN KEY(id_dzial) REFERECES dzial(id)
 );
 
