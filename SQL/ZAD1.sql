@@ -5,8 +5,8 @@ CREATE TABLE premia (
 
 CREATE TABLE dzial (
     id INTEGER PRIMARY KEY,
-    nazwa VARCHAR,
-    siedziba VARCHAR,
+    nazwa VARCHAR(40),
+    siedziba VARCHAR(40)
 );
 
 CREATE TABLE pracownicy (
@@ -16,9 +16,9 @@ CREATE TABLE pracownicy (
     stanowisko VARCHAR(20),
     data_zatr VARCHAR(23),
     placa NUMERIC,
-    premia NUMERIC,
     id_dzial INTEGER,
-    FOREIGN KEY(stanowisko) REFERECES dzial(id),
-    FOREIGN KEY(id_dzial) REFERECES dzial(id)
+    premia NUMERIC DEFAULT 0,
+    FOREIGN KEY(stanowisko) REFERENCES dzial(id),
+    FOREIGN KEY(id_dzial) REFERENCES dzial(id)
 );
 
