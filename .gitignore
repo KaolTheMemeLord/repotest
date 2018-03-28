@@ -4,4 +4,9 @@ cpp/*
 !cpp/*.cxx
 !cpp/Makefile
 !cpp/kl*
-*.pyc
+*.pyc[cod]
+venv
+pve
+Flask/quiz-orm/pve3/
+Flask/quiz-orm/__pycache__/
+.DS_Store
